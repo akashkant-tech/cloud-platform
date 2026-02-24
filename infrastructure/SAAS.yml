@@ -1,0 +1,29 @@
+- hosts: 192.168.43.185
+ 
+  vars_prompt:
+  - name: x
+    prompt: "Enter your name"
+    private: false     
+  
+  tasks:
+ 
+#  - name: install   docker
+#    pip:
+#      name: docker-py
+
+  - name: start service
+
+    service:
+       name: docker
+       state: started
+
+  - docker_container:
+     name: "{{x}}-firefox"
+     image: "firefox:v1"
+     interactive: True
+     privileged: true
+     tty: true
+     ports:
+      - "9999:22" 
+
+ 

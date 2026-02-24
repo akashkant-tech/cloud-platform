@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>     
+<!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+	*{
+	padding:0px;
+	margin:0px;
+}
+body {
+      position: relative; 
+  }
+</style>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div class="container-fluid" style="height:150px;">
+		<div class="row">
+			<marquee behavior="alternate"><div class="col-sm-3" style="background-color:white; height:150px"><img src="docker.png" class="float-left" style="height:150px; padding-left:0px; padding-top: 5px"></div></marquee>
+			<div class="col-sm-9" style="background-color:white;line-height:140px; font-size:70px">
+<!--<p style="color:navy">Container As a Service</p>-->
+</div>
+		</div>
+	</div>
+	<div style="height:100px; padding:50px">
+<center>
+     	   <form action="cgi-bin/test.py">
+               <label for="name">ContainerName:</label>
+                <input type="text" id="name" name="cn"> 
+
+               <label for="cimg">ContainerImage:</label>
+               <select id="cimg" name="img">
+                  <option value="Centos">Centos</option>
+                  <option value="Ubuntu">Ubuntu</option>
+                </select>  
+
+    <input type="submit" value="submit">
+           </form>
+	<p>&nbsp;</p>
+	
+	<h3><a href=http://192.168.43.185/cgi-bin/dockerlistv2.py>Manage your Docker</a></h3>
+</center>
+	</div>
+<!--    <div style="padding:20px">
+    <center><a href="http://192.168.43.110:9093" target="contframe">launch container</a>
+    <iframe name="contframe" height="300" width="800">            
+    </center>
+    </div> -->  
+ </div>
+</body>	
+</html>

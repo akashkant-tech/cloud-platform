@@ -1,0 +1,18 @@
+- hosts: 192.168.43.185
+  vars_prompt:
+  - name: x
+    private: false
+  - name: y
+    private: false  
+  tasks:
+  - name: extend
+    lvol:
+      vg: myvg
+      lv: '{{x}}'
+      size: '{{y}}'
+  - name: filesystem
+    filesystem:
+      dev: "/dev/myvg/{{x}}"
+      resizefs: yes
+      fstype: ext4
+
