@@ -1,0 +1,26 @@
+# AI/ML Dependencies
+opencv-python==4.5.5.64
+numpy==1.19.5
+pyttsx3==2.90
+SpeechRecognition==3.8.1
+
+# Web Framework
+flask==2.0.1
+cgi==0.0.1
+
+# System Integration
+subprocess32==3.5.4
+psutil==5.8.0
+
+# Data Processing
+pandas==1.1.5
+jupyter==1.0.0
+
+# Security
+cryptography==3.4.8
+bcrypt==3.2.0
+
+# Development
+pytest==6.2.5
+black==21.6b0
+flake8==3.9.2
